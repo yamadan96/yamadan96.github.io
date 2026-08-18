@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_portfolio=self.webpackChunkmy_portfolio||[]).push([[9079],{1460:(e,r,o)=>{o.d(r,{createWardleyServices:()=>s.J});var s=o(2108);o(9313)}}]);
