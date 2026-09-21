@@ -115,6 +115,16 @@ const certifications = [
     description: '松尾・岩澤研究室が主宰する Physical AI 基礎編（2026）を修了（2026年9月11日付）',
     link: '/certificates/matsuoken-physical-ai-basic-2026.pdf',
   },
+  {
+    name: '東京大学松尾・岩澤研究室 集中講義「大規模言語モデル1」修了証',
+    shortName: '大規模言語モデル1（集中講義2026）修了',
+    issuer: '東京大学 松尾・岩澤研究室',
+    category: 'AI',
+    year: '2026年9月',
+    description:
+      '松尾・岩澤研究室が主宰する集中講義で、大規模言語モデルの設計と開発に関する所定のプログラムを修了（2026年9月16日付）',
+    link: '/certificates/matsuoken-llm-1-2026.pdf',
+  },
 ];
 
 export default certifications;
