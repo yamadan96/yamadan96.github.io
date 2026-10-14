@@ -125,6 +125,15 @@ const certifications = [
       '松尾・岩澤研究室が主宰する集中講義で、大規模言語モデルの設計と開発に関する所定のプログラムを修了（2026年9月16日付）',
     link: '/certificates/matsuoken-llm-1-2026.pdf',
   },
+  {
+    name: '東京大学松尾・岩澤研究室 集中講義「大規模言語モデル1」修了証（GENIAC-PRIZE認定）',
+    shortName: '大規模言語モデル1 修了（GENIAC-PRIZE認定）',
+    issuer: '東京大学 松尾・岩澤研究室',
+    category: 'AI',
+    year: '2026年10月',
+    description: '集中講義「大規模言語モデル1」の GENIAC-PRIZE 認定版の修了証（2026年10月16日付）',
+    link: '/certificates/matsuoken-llm-1-geniac-prize-2026.pdf',
+  },
 ];
 
 export default certifications;
