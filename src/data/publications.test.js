@@ -9,7 +9,7 @@ describe('publication data', () => {
   });
 
   it('splits the entries into conference papers (newest first) and theses', () => {
-    expect(conferencePapers.map((p) => p.id)).toEqual(['pub-ite2026', 'pub-ieice2026', 'pub-fit2025']);
+    expect(conferencePapers.map((p) => p.id)).toEqual(['pub-mh2026', 'pub-ite2026', 'pub-ieice2026', 'pub-fit2025']);
     expect(theses.map((p) => p.id)).toEqual(['pub-bachelor-thesis']);
   });
 

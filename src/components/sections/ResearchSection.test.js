@@ -20,6 +20,7 @@ describe('ResearchSection (top page)', () => {
     expect(screen.getByRole('heading', { level: 2, name: 'Research' })).toBeInTheDocument();
     const findings = screen.getAllByRole('heading', { level: 3 }).map((h) => h.textContent);
     expect(findings).toEqual([
+      '専門家ラベル3〜10%で、正解率が画像のみより 7.4〜10.8pt 向上',
       'DINOv2 が DINOv3 を +5.53pt 上回った',
       'Accuracy 68.99% → 71.04%、Macro F1 0.6366 → 0.6556',
       'LoRA で DINOv2 の Macro F1 0.37 → 0.56',
@@ -45,7 +46,7 @@ describe('ResearchSection (top page)', () => {
     expect(screen.getByText('FIT2025 第24回情報科学技術フォーラム · 口頭')).toBeInTheDocument();
     expect(screen.getByText('総合研究院フォーラム2025 · ポスター')).toBeInTheDocument();
     // 1つの研究を複数会場で発表するため、会場数はデータから数える
-    expect(screen.getByText(/3件の研究を5会場で発表 · IWAIT 2027 投稿済み（査読中）/)).toBeInTheDocument();
+    expect(screen.getByText(/4件の研究を6会場で発表 · IWAIT 2027 投稿済み（査読中）/)).toBeInTheDocument();
     // 正式な発表題目も各行に出す
     expect(
       screen.getByText(/発表題目：視覚基盤モデルによる小・中規模被災建物画像データセットの分類性能の比較/)

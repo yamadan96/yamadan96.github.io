@@ -24,10 +24,11 @@ describe('ResearchPage (level 2 list)', () => {
     ).toBeInTheDocument();
   });
 
-  it('lists the three papers newest first, each with its one-line claim and a link to its own page', () => {
+  it('lists the papers newest first, each with its one-line claim and a link to its own page', () => {
     renderPage();
     const links = screen.getAllByRole('link', { name: '詳細 →' });
     expect(links.map((a) => a.getAttribute('href'))).toEqual([
+      '/research/pub-mh2026',
       '/research/pub-ite2026',
       '/research/pub-ieice2026',
       '/research/pub-fit2025',
@@ -49,10 +50,10 @@ describe('ResearchPage (level 2 list)', () => {
 
   it('shows three result cards per paper with the numbers of the data file', () => {
     renderPage();
-    ['+5.53pt', '68.99→71.04%', '0.37 → 0.56'].forEach((value) =>
+    ['+7.4〜10.8pt', '+5.53pt', '68.99→71.04%', '0.37 → 0.56'].forEach((value) =>
       expect(screen.getByText(value)).toBeInTheDocument()
     );
-    expect(screen.getAllByText('1,040枚')).toHaveLength(2);
+    expect(screen.getAllByText('1,040枚')).toHaveLength(3);
   });
 
   it('shows the thesis as a single row', () => {

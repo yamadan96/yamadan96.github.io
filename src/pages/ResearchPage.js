@@ -183,7 +183,7 @@ const ResearchPage = () => (
   <>
     <SubPageHeader
       title="Research"
-      lead="学会発表3件と学位論文。原稿・スライド・要旨は各項目の詳細ページに置いている。"
+      lead="学会・シンポジウムでの発表4件と学位論文。原稿・スライド・要旨は各項目の詳細ページに置いている。"
     />
     <Wrapper>
       <Block>
