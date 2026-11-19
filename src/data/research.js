@@ -1,4 +1,4 @@
-// 進行中・投稿中の研究テーマ。
+// 進行中・投稿中・採択済み（発表前）の研究テーマ。
 // 発表済み／確定済みの学会発表・論文は publications.js を参照。
 
 // /research の冒頭に出す「Research Focus」。現在の研究テーマ（災害画像解析・意匠画像検索）を2〜3行で言う
@@ -16,11 +16,11 @@ const research = [
     shortVenue: 'IWAIT 2027',
     title: 'Building Damage Classification Using Post-Disaster Images with Limited Expert Annotations',
     titleJa: '限られた専門家ラベルによる災害後画像からの被災家屋分類',
-    venue: 'IWAIT 2027（韓国・ソウル、2027年1月10〜12日）投稿済み・査読中',
+    venue: 'IWAIT 2027（韓国・ソウル、2027年1月10〜12日）採択・発表予定',
     year: 2027,
-    type: '国際会議（査読中）',
-    // 2026-08-20 締切の拡張アブストラクトを EasyChair へ提出済み（採否は未定）
-    status: 'submitted',
+    type: '国際会議（採択）',
+    // 2026-08-20 締切の拡張アブストラクトを EasyChair へ提出し、採択された。発表は 2027年1月
+    status: 'accepted',
     problem:
       '被災家屋の損傷度は専門家でないとラベル付けできず、全数アノテーションが導入の障壁になる。写真だけでは災害の種別は分かっても、同じ種別内の損傷度の差は外観から判別しにくい。',
     contribution:

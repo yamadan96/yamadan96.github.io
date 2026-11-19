@@ -110,7 +110,7 @@ const RowLink = styled(motion.a)`
   ${mobileTapArea}
 `;
 
-// 件数と投稿中（査読中）の国際会議を1行で添える
+// 件数と、採択済み（発表前）・投稿中（査読中）の国際会議を1行で添える
 const FooterLine = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.sm};
   color: ${({ theme }) => theme.colors.textMuted};
@@ -142,6 +142,9 @@ const MoreLink = styled(motion.button)`
 
 const submitting = research.filter((item) => item.status === 'submitted');
 const submittingVenues = submitting.map((item) => item.shortVenue || item.venue).join('／');
+
+const accepted = research.filter((item) => item.status === 'accepted');
+const acceptedVenues = accepted.map((item) => item.shortVenue || item.venue).join('／');
 
 const ResearchSection = () => {
   const navigate = useNavigate();
@@ -182,6 +185,7 @@ const ResearchSection = () => {
       </Rows>
       <FooterLine>
         {conferencePapers.length}件の研究を{presentationCount}会場で発表
+        {accepted.length > 0 && ` · ${acceptedVenues} 採択（発表予定）`}
         {submitting.length > 0 && ` · ${submittingVenues} 投稿済み（査読中）`}
       </FooterLine>
       <MoreLinks>

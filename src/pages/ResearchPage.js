@@ -6,7 +6,7 @@ import { conferencePapers, theses } from '../data/publications';
 import research, { researchFocus } from '../data/research';
 
 // Level 2: 研究の一覧。15秒で「何を研究しているか」と「発表3件でそれぞれ何が分かったか」が読めるようにする。
-// 順番は Research Focus → Publications（新しい順）→ Thesis → 投稿中の1行。
+// 順番は Research Focus → Publications（新しい順）→ Thesis → 採択済み・投稿中の1行。
 // 要旨・引用・原稿PDF・細かい数値（検定・LoRA のランク・論文間比較）は個別ページ（/research/:id）に置き、ここには出さない。
 
 const Wrapper = styled.div`
@@ -158,7 +158,7 @@ const DetailLink = styled(Link)`
   }
 `;
 
-/* 投稿中（査読中）の国際会議を1行だけ添える（トップページと同じ文言） */
+/* 採択済み（発表前）・投稿中（査読中）の国際会議を1行ずつ添える（トップページと同じ文言） */
 const SubmittingNote = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.sm};
   color: ${({ theme }) => theme.colors.textMuted};
@@ -178,6 +178,9 @@ export const presentationBadge = (type = '') => {
 
 const submitting = research.filter((item) => item.status === 'submitted');
 const submittingVenues = submitting.map((item) => item.shortVenue || item.venue).join('／');
+
+const accepted = research.filter((item) => item.status === 'accepted');
+const acceptedVenues = accepted.map((item) => item.shortVenue || item.venue).join('／');
 
 const ResearchPage = () => (
   <>
@@ -247,6 +250,9 @@ const ResearchPage = () => (
         </Block>
       )}
 
+      {accepted.length > 0 && (
+        <SubmittingNote>国際会議に採択（発表予定）— {acceptedVenues}</SubmittingNote>
+      )}
       {submitting.length > 0 && (
         <SubmittingNote>国際会議へ投稿済み（査読中）— {submittingVenues}</SubmittingNote>
       )}

@@ -77,8 +77,9 @@ describe('ResearchPage (level 2 list)', () => {
     expect(screen.queryByRole('link', { name: /原稿PDF/ })).not.toBeInTheDocument();
   });
 
-  it('keeps the one-line note for the submitted paper', () => {
+  it('keeps the one-line note for the accepted paper', () => {
     renderPage();
-    expect(screen.getByText(/国際会議へ投稿済み（査読中）— IWAIT 2027/)).toBeInTheDocument();
+    expect(screen.getByText(/国際会議に採択（発表予定）— IWAIT 2027/)).toBeInTheDocument();
+    expect(screen.queryByText(/査読中/)).not.toBeInTheDocument();
   });
 });

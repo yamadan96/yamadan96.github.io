@@ -10,7 +10,7 @@
 const publications = [
   {
     // 学内のシンポジウム（学会ではない）だが、一覧に載せるため type は「学会発表（ポスター）」で分類する。画面には Poster バッジだけが出る。
-    // 内容は IWAIT 2027 に投稿中の研究（research.js の research-iwait2027）と同じ。数値はポスターの表（＝IWAIT 提出原稿の Table I）から取る
+    // 内容は IWAIT 2027 に採択された研究（research.js の research-iwait2027）と同じ。数値はポスターの表（＝IWAIT 提出原稿の Table I）から取る
     id: 'pub-mh2026',
     shortVenue: 'TUS マルチハザード都市防災研究拠点シンポジウム 2026',
     shortTitle: '撮影位置による被害分類の補正',
